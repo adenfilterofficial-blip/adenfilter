@@ -9,33 +9,21 @@ import { ProductCard } from '../components/ProductCard';
 import { Packages } from '../components/Packages';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Calendar, MapPin, ShieldCheck } from 'lucide-react';
-import { motion, useInView } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 const StatCounter = ({ value, label, icon: Icon, suffix = "" }: { value: number, label: string, icon: any, suffix?: string }) => {
-  const [count, setCount] = useState(0);
+  const count = useMotionValue(0);
+  const formattedCount = useTransform(count, (latest) => Math.round(latest).toLocaleString());
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
     if (isInView) {
-      let start = 0;
-      const end = value;
-      const duration = 2000;
-      const increment = end / (duration / 16);
-      
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= end) {
-          setCount(end);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(start));
-        }
-      }, 16);
-      return () => clearInterval(timer);
+      const controls = animate(count, value, { duration: 2 });
+      return controls.stop;
     }
-  }, [isInView, value]);
+  }, [isInView, value, count]);
 
   return (
     <motion.div 
@@ -63,7 +51,7 @@ const StatCounter = ({ value, label, icon: Icon, suffix = "" }: { value: number,
         WebkitTextFillColor: 'transparent',
         display: 'inline-block'
       }}>
-        {count.toLocaleString()}{suffix}
+        <motion.span>{formattedCount}</motion.span>{suffix}
       </div>
       <div style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 600 }}>{label}</div>
     </motion.div>
