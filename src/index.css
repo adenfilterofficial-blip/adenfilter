@@ -85,6 +85,14 @@ body {
   gap: 0.75rem;
 }
 
+.brand-aden {
+  color: #ef4444; /* Modern Red */
+}
+
+.brand-filter {
+  color: var(--primary-dark);
+}
+
 /* Hero Carousel */
 .hero-carousel {
   position: relative;
