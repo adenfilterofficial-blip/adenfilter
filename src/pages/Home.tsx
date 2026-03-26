@@ -8,6 +8,67 @@ import { GallerySlider } from '../components/GallerySlider';
 import { ProductCard } from '../components/ProductCard';
 import { Packages } from '../components/Packages';
 import { Link } from 'react-router-dom';
+import { CheckCircle, Calendar, MapPin, ShieldCheck } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
+
+const StatCounter = ({ value, label, icon: Icon, suffix = "" }: { value: number, label: string, icon: any, suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = value;
+      const duration = 2000;
+      const increment = end / (duration / 16);
+      
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          setCount(end);
+          clearInterval(timer);
+        } else {
+          setCount(Math.floor(start));
+        }
+      }, 16);
+      return () => clearInterval(timer);
+    }
+  }, [isInView, value]);
+
+  return (
+    <motion.div 
+      ref={ref} 
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6 }}
+      className="stat-item" 
+      style={{ flex: '1', minWidth: '200px', padding: '1.5rem', textAlign: 'center' }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+        <motion.div 
+          whileHover={{ scale: 1.1 }}
+          style={{ padding: '0.75rem', backgroundColor: 'rgba(29, 78, 216, 0.1)', borderRadius: '12px', color: '#1d4ed8' }}
+        >
+          <Icon size={28} />
+        </motion.div>
+      </div>
+      <div style={{ 
+        fontSize: '2.5rem', 
+        fontWeight: 800, 
+        marginBottom: '0.25rem',
+        background: 'linear-gradient(to right, #1d4ed8, #06b6d4)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        display: 'inline-block'
+      }}>
+        {count.toLocaleString()}{suffix}
+      </div>
+      <div style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 600 }}>{label}</div>
+    </motion.div>
+  );
+};
 
 export const Home = ({ contact, products }: { contact: any, products: any[] }) => {
   const topProducts = products.slice(0, 3);
@@ -16,22 +77,21 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
     <>
       <HeroCarousel ctaLink={contact.whatsapp_link} />
 
-      <div className="container" style={{ position: 'relative', zIndex: 10, marginTop: '2rem', marginBottom: '4rem' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', padding: '2rem', textAlign: 'center', gap: '1rem', backgroundColor: '#ffffff', borderRadius: '16px', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.1)', border: '1px solid rgba(0,0,0,0.05)' }}>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>5000+</div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Instalasi Sukses</div>
-          </div>
-          <div style={{ width: '1px', backgroundColor: 'rgba(0,0,0,0.1)' }} className="hide-on-mobile"></div>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>15+ Tahun</div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Pengalaman</div>
-          </div>
-          <div style={{ width: '1px', backgroundColor: 'rgba(0,0,0,0.1)' }} className="hide-on-mobile"></div>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>1 Tahun</div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Garansi Tabung</div>
-          </div>
+      <div className="container" style={{ position: 'relative', zIndex: 10, padding: '5rem 0' }}>
+        <div style={{ 
+          display: 'flex', 
+          flexWrap: 'wrap', 
+          justifyContent: 'center', 
+          backgroundColor: '#ffffff', 
+          borderRadius: '24px', 
+          boxShadow: '0 4px 20px -5px rgba(0,0,0,0.05)', 
+          border: '1px solid rgba(0,0,0,0.05)',
+          overflow: 'hidden'
+        }}>
+          <StatCounter value={5000} label="Instalasi Sukses" icon={CheckCircle} suffix="+" />
+          <StatCounter value={15} label="Tahun Pengalaman" icon={Calendar} suffix="+" />
+          <StatCounter value={2} label="Kantor Cabang" icon={MapPin} />
+          <StatCounter value={100} label="Garansi Kepuasan" icon={ShieldCheck} suffix="%" />
         </div>
       </div>
 
