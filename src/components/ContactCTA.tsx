@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export const ContactCTA: React.FC<{ whatsappLink: string }> = ({ whatsappLink }) => {
-  const [showBubble, setShowBubble] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBubble(true);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="floating-cta-container">
-      <div className={`cta-bubble ${showBubble ? 'show' : ''}`}>
-        Halo! Cek kualitas air Anda gratis di sini.
-      </div>
       <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="floating-cta">
         <div className="cta-icon-wrapper">
           <svg className="cta-icon" viewBox="0 0 24 24" fill="currentColor">
