@@ -6,8 +6,8 @@ export const ProfileSnippet = () => {
     <section className="container section-padding">
       <div className="profile-snippet-layout">
         <div className="profile-snippet-content">
-          <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '2.2rem' }}>Pakar Penjernih Air Terpercaya di Bogor & Sekitarnya</h2>
-          
+          <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '2.2rem' }}>Pakar Penjernih Air Terpercaya di JABODETABEK & Sekitarnya</h2>
+
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', background: 'rgba(56, 189, 248, 0.1)', padding: '1rem', borderRadius: '12px', marginBottom: '1.5rem', border: '1px solid rgba(56, 189, 248, 0.2)' }}>
             <ShieldCheck size={24} color="var(--primary-blue)" style={{ flexShrink: 0, marginTop: '2px' }} />
             <p style={{ color: 'var(--primary-dark)', fontSize: '0.95rem', lineHeight: 1.5, margin: 0, fontWeight: 500 }}>
@@ -32,8 +32,8 @@ export const ProfileSnippet = () => {
         <div className="profile-snippet-image">
           <img src="/assets/images/about-office-tangsel.jpg" alt="Workshop Aden Filter" className="profile-img" loading="lazy" />
           <div className="experience-badge glass-panel">
-            <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary-dark)' }}>10+</span>
-            <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tahun<br/>Pengalaman</span>
+            <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary-dark)' }}>15+</span>
+            <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tahun<br />Pengalaman</span>
           </div>
         </div>
       </div>
