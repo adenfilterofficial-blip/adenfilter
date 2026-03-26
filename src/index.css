@@ -477,7 +477,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3); /* Lighter overlay */
     backdrop-filter: blur(4px);
     z-index: 999;
   }
@@ -486,18 +486,20 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px; /* Compact width */
-    height: 100vh;
+    width: 50%; /* 0.5 lebar layar */
+    height: auto;
+    max-height: 70vh; /* Tidak fullscreen ke bawah */
     background: #ffffff;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 2rem 0;
-    gap: 1.5rem;
+    padding: 5rem 0 2rem; /* Ruang untuk tombol X */
+    gap: 1.25rem;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    opacity: 1; /* Keep visible but off-screen */
+    border-bottom-left-radius: 24px; /* Rounded corner */
+    opacity: 1;
     visibility: visible;
   }
   
@@ -506,12 +508,11 @@ body {
   }
   
   .nav-link {
-    font-size: 1.15rem;
+    font-size: 1.1rem; /* Slightly smaller for compactness */
     font-weight: 600;
-    width: 100%;
+    width: 90%;
     text-align: center;
     padding: 0.75rem 0;
-    border-bottom: none; /* Removed for cleaner look with smaller gap */
   }
 
   .nav-link::after {
