@@ -36,9 +36,17 @@ const Navbar = () => {
           className="menu-toggle" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          style={{ zIndex: 1001 }}
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
+
+        {isMenuOpen && (
+          <div 
+            className="nav-overlay" 
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
 
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Beranda</Link>

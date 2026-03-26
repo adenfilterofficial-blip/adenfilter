@@ -471,43 +471,47 @@ body {
     display: flex;
   }
   
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+  }
+
   .nav-links {
     position: fixed;
-    top: 68px; /* Slightly adjusted for better alignment */
-    left: -110%; /* Fully off-screen */
-    width: 100%;
-    height: calc(100vh - 68px);
+    top: 0;
+    right: -100%;
+    width: 280px; /* Compact width */
+    height: 100vh;
     background: #ffffff;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 2.5rem 0;
-    gap: 1.25rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Float above all other elements */
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto; /* Allow scrolling if menu is long */
-  }
-  
-  .nav-links.active {
-    left: 0;
-    opacity: 1;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 1; /* Keep visible but off-screen */
     visibility: visible;
   }
   
-  .nav-link {
-    font-size: 1.25rem;
-    font-weight: 600;
-    width: 80%;
-    text-align: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.03);
+  .nav-links.active {
+    right: 0;
   }
-
-  .nav-link:last-child {
-    border-bottom: none;
+  
+  .nav-link {
+    font-size: 1.15rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+    border-bottom: none; /* Removed for cleaner look with smaller gap */
   }
 
   .nav-link::after {
