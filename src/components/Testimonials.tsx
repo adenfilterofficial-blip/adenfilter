@@ -6,7 +6,7 @@ export const Testimonials = () => {
   ];
   
   return (
-    <section className="container section-padding" style={{ paddingBottom: '7rem' }}>
+    <section className="container section-padding">
       <h2 className="section-title">Testimoni Klien & Pelanggan</h2>
       <div className="testi-grid">
         {tests.map((t, i) => (

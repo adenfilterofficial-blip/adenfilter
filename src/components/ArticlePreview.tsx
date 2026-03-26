@@ -23,7 +23,7 @@ const articles = [
 
 export const ArticlePreview = () => {
   return (
-    <section className="container section-padding" style={{ paddingBottom: '3rem' }}>
+    <section className="container section-padding">
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 className="section-title" style={{ marginBottom: '1rem' }}>Edukasi & Artikel</h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Panduan dan informasi mendalam seputar instalasi, perawatan, dan kualitas air minum terbaik.</p>

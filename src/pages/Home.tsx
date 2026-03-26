@@ -16,7 +16,7 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
     <>
       <HeroCarousel ctaLink={contact.whatsapp_link} />
       
-      <div className="container" style={{ marginTop: '-3rem', position: 'relative', zIndex: 10 }}>
+      <div className="container" style={{ marginTop: '-4rem', position: 'relative', zIndex: 10, marginBottom: '2rem' }}>
         <div className="glass-panel" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', padding: '1.5rem', textAlign: 'center', gap: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
           <div>
             <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>1.000+</div>
@@ -35,10 +35,10 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
         </div>
       </div>
 
-      <Features />
-      <ProfileSnippet />
+      <div className="home-section"><Features /></div>
+      <div className="home-section"><ProfileSnippet /></div>
       
-      <section className="container section-padding">
+      <section className="container section-padding home-section">
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h2 className="section-title" style={{ marginBottom: '1rem' }}>Produk Unggulan</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Sistem filter air premium terbaik pilihan pelanggan kami.</p>
@@ -60,11 +60,11 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
         </div>
       </section>
 
-      <ProblemSolution />
-      <Packages />
-      <Testimonials />
-      <ArticlePreview />
-      <GallerySlider />
+      <div className="home-section"><ProblemSolution /></div>
+      <div className="home-section"><Packages /></div>
+      <div className="home-section"><Testimonials /></div>
+      <div className="home-section"><ArticlePreview /></div>
+      <div className="home-section"><GallerySlider /></div>
     </>
   );
 };

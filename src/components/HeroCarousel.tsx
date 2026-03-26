@@ -7,19 +7,19 @@ const slides = [
     image: "/assets/images/hero-slide-1.jpg",
     title: "Air Kuning, Bau Besi, atau Berkapur? Selesai dalam 1x Instalasi!",
     subtitle: "Solusi Air Bersih Terpercaya • Terdaftar HAKI • Gratis Konsultasi & Cek Kualitas Air.",
-    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%)"
+    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%)"
   },
   {
     image: "/assets/images/hero-slide-2.jpg",
     title: "Teknologi Media Carbon & Resin Import",
     subtitle: "Filtrasi maksimal untuk air bening, bebas kuman, dan tidak meninggalkan noda pada peralatan rumah tangga.",
-    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%)"
+    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%)"
   },
   {
     image: "/assets/images/hero-slide-3.jpg",
     title: "Melayani Aceh hingga Papua, Pusat di Tangsel & Jogja",
     subtitle: "Sudah dipercaya lebih dari 1.000+ pelanggan residensial dan industri di seluruh Indonesia.",
-    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%)"
+    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%)"
   }
 ];
 
@@ -48,7 +48,7 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
             fetchPriority={index === 0 ? "high" : ("low" as any)}
           />
           <div className="hero-overlay" style={{ background: slide.overlayBg }}></div>
-          <div className="hero-content" style={{ padding: '0 1.5rem', width: '100%' }}>
+          <div className="hero-content" style={{ padding: '80px 1.5rem 0', width: '100%', top: '50%' }}>
             {index === 0 && (
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', padding: '0.4rem 1rem', borderRadius: '50px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.3)', marginBottom: '1.5rem', position: 'relative', zIndex: 10 }}>
                 <Shield size={16} color="var(--primary-color, #fff)" />

@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 export const ProfileSnippet = () => {
   return (
-    <section className="container section-padding" style={{ paddingBottom: '2rem' }}>
+    <section className="container section-padding">
       <div className="profile-snippet-layout">
         <div className="profile-snippet-content">
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem', fontSize: '2.2rem' }}>Pakar Penjernih Air Terpercaya di Bogor & Sekitarnya</h2>

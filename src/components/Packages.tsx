@@ -23,7 +23,7 @@ export const Packages = () => {
   ];
 
   return (
-    <section className="container section-padding" style={{ backgroundColor: 'rgba(248,250,252,0.5)', borderRadius: '24px', margin: '2rem auto' }}>
+    <section className="container section-padding" style={{ background: 'rgba(248,250,252,0.8)', borderRadius: '32px', border: '1px solid var(--glass-border)' }}>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 className="section-title" style={{ marginBottom: '1rem' }}>Paket Solusi Populer</h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', fontWeight: 600 }}>Tersedia berbagai pilihan. Harga mulai dari <span style={{ color: 'var(--primary-color)' }}>Rp 2.750.000</span></p>
