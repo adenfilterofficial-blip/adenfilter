@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Shield, Menu, X } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Home } from './pages/Home';
-import { Products } from './pages/Products';
-import { Gallery } from './pages/Gallery';
-import { Articles } from './pages/Articles';
-import { About } from './pages/About';
-import { Contact } from './pages/Contact';
 import { ContactCTA } from './components/ContactCTA';
 import data from './products.json';
 import './index.css';
+
+const Products = lazy(() => import('./pages/Products').then(m => ({ default: m.Products })));
+const Gallery = lazy(() => import('./pages/Gallery').then(m => ({ default: m.Gallery })));
+const Articles = lazy(() => import('./pages/Articles').then(m => ({ default: m.Articles })));
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -148,14 +149,16 @@ export default function App() {
       <div className="app-wrapper">
         <Navbar />
         <main>
-          <Routes>
-            <Route path="/" element={<Home contact={data.contact} products={data.products} />} />
-            <Route path="/produk" element={<Products products={data.products} backwash={data.backwash} />} />
-            <Route path="/galeri" element={<Gallery />} />
-            <Route path="/artikel" element={<Articles />} />
-            <Route path="/tentang-kami" element={<About />} />
-            <Route path="/kontak" element={<Contact contact={data.contact} />} />
-          </Routes>
+          <Suspense fallback={<div style={{ minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b' }}>Memuat Halaman...</div>}>
+            <Routes>
+              <Route path="/" element={<Home contact={data.contact} products={data.products} />} />
+              <Route path="/produk" element={<Products products={data.products} backwash={data.backwash} />} />
+              <Route path="/galeri" element={<Gallery />} />
+              <Route path="/artikel" element={<Articles />} />
+              <Route path="/tentang-kami" element={<About />} />
+              <Route path="/kontak" element={<Contact contact={data.contact} />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <ContactCTA whatsappLink={data.contact.whatsapp_link} />
