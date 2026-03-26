@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { MapPin, Phone, Mail, Shield } from 'lucide-react';
+import { MapPin, Phone, Mail, Shield, Menu, X } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Home } from './pages/Home';
@@ -14,10 +14,16 @@ import data from './products.json';
 import './index.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Close menu when location changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
   return (
-    <nav className="navbar glass-panel" style={{ padding: '0.75rem 0' }}>
+    <nav className="navbar" style={{ padding: '0.75rem 0' }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" className="navbar-brand">
           {data.main_images && data.main_images[0] && (
@@ -25,7 +31,16 @@ const Navbar = () => {
           )}
           AdenFilter®
         </Link>
-        <div className="nav-links">
+        
+        <button 
+          className="menu-toggle" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Beranda</Link>
           <Link to="/produk" className={`nav-link ${location.pathname === '/produk' ? 'active' : ''}`}>Produk</Link>
           <Link to="/galeri" className={`nav-link ${location.pathname === '/galeri' ? 'active' : ''}`}>Galeri</Link>
@@ -62,7 +77,7 @@ const Footer = () => (
             <li>
               <div>
                 <strong style={{ display: 'block', color: '#fff', fontSize: '0.95rem', marginBottom: '4px' }}>Berapa lama pemasangan?</strong>
-                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Sekitar 1-2 Jam selesai.</span>
+                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Sekitar 2-3 Jam selesai.</span>
               </div>
             </li>
             <li>
