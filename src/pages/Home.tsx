@@ -16,8 +16,8 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
     <>
       <HeroCarousel ctaLink={contact.whatsapp_link} />
       
-      <div className="container" style={{ marginTop: '-2.5rem', position: 'relative', zIndex: 10, marginBottom: '4rem' }}>
-        <div className="glass-panel" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', padding: '1.5rem', textAlign: 'center', gap: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 10, marginTop: '2rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', padding: '2rem', textAlign: 'center', gap: '1rem', backgroundColor: '#ffffff', borderRadius: '16px', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.1)', border: '1px solid rgba(0,0,0,0.05)' }}>
           <div>
             <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>1.000+</div>
             <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Instalasi Sukses</div>
