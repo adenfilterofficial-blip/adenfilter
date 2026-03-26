@@ -6,17 +6,20 @@ const slides = [
   {
     image: "https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&q=80&w=1920",
     title: "Air Kuning, Bau Besi, atau Berkapur? Selesai dalam 1x Instalasi!",
-    subtitle: "Solusi Air Bersih Terpercaya • Terdaftar HAKI • Gratis Konsultasi & Cek Kualitas Air."
+    subtitle: "Solusi Air Bersih Terpercaya • Terdaftar HAKI • Gratis Konsultasi & Cek Kualitas Air.",
+    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%)"
   },
   {
     image: "https://images.unsplash.com/photo-1585704146757-bc0c2fdb8afc?auto=format&fit=crop&q=80&w=1920",
-    title: "Teknologi Filter Air Modern & Tahan Lama",
-    subtitle: ""
+    title: "Teknologi Media Carbon & Resin Import",
+    subtitle: "Filtrasi maksimal untuk air bening, bebas kuman, dan tidak meninggalkan noda pada peralatan rumah tangga.",
+    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%)"
   },
   {
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920",
-    title: "Solusi Air Bersih Skala Besar untuk Bisnis Anda",
-    subtitle: ""
+    title: "Melayani Aceh hingga Papua, Pusat di Tangsel & Jogja",
+    subtitle: "Sudah dipercaya lebih dari 1.000+ pelanggan residensial dan industri di seluruh Indonesia.",
+    overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%)"
   }
 ];
 
@@ -44,33 +47,33 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
             loading={index === 0 ? "eager" : "lazy"} 
             fetchPriority={index === 0 ? "high" : ("low" as any)}
           />
-          <div className="hero-overlay"></div>
-          <div className="hero-content">
+          <div className="hero-overlay" style={{ background: slide.overlayBg }}></div>
+          <div className="hero-content" style={{ padding: '0 1.5rem', width: '100%' }}>
             {index === 0 && (
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', padding: '0.4rem 1rem', borderRadius: '50px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.3)', marginBottom: '1rem' }}>
-                <Shield size={16} color="var(--primary-color)" />
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', padding: '0.4rem 1rem', borderRadius: '50px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.3)', marginBottom: '1.5rem', position: 'relative', zIndex: 10 }}>
+                <Shield size={16} color="var(--primary-color, #fff)" />
                 <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>Brand Terdaftar Resmi HAKI</span>
               </div>
             )}
-            <h1 className="hero-slide-title">{slide.title}</h1>
+            <h1 className="hero-slide-title" style={{ marginBottom: '1rem' }}>{slide.title}</h1>
             {slide.subtitle && (
-              <p style={{ fontSize: '1.2rem', color: '#e2e8f0', marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+              <p style={{ fontSize: '1.2rem', color: '#e2e8f0', maxWidth: '800px', margin: '0 auto 2rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                 {slide.subtitle}
               </p>
             )}
+            
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', pointerEvents: 'auto', flexWrap: 'wrap' }}>
+               <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="hero-cta" style={{ backgroundColor: '#25D366', color: '#fff' }}>
+                 Konsultasi Gratis (WA)
+               </a>
+               <Link to="/produk" className="hero-cta" style={{ backgroundColor: 'rgba(0,0,0,0.3)', border: '2px solid #fff', color: '#fff', backdropFilter: 'blur(4px)' }}>
+                 Lihat Katalog Produk
+               </Link>
+            </div>
           </div>
         </div>
       ))}
       
-      <div className="hero-static-cta" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', pointerEvents: 'auto', flexWrap: 'wrap' }}>
-         <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="hero-cta" style={{ backgroundColor: '#25D366', color: '#fff' }}>
-           Konsultasi Gratis (WA)
-         </a>
-         <Link to="/produk" className="hero-cta" style={{ backgroundColor: 'transparent', border: '2px solid #fff', color: '#fff' }}>
-           Lihat Katalog Produk
-         </Link>
-      </div>
-
       <button className="carousel-control prev" onClick={prevSlide} aria-label="Previous">❮</button>
       <button className="carousel-control next" onClick={nextSlide} aria-label="Next">❯</button>
 
