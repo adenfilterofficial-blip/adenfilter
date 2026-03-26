@@ -30,7 +30,7 @@ export const ProfileSnippet = () => {
           </Link>
         </div>
         <div className="profile-snippet-image">
-          <img src="https://images.unsplash.com/photo-1581092921461-7031e4bf0e5f?auto=format&fit=crop&w=800&q=80" alt="Workshop Aden Filter" className="profile-img" loading="lazy" />
+          <img src="/assets/images/about-office-tangsel.jpg" alt="Workshop Aden Filter" className="profile-img" loading="lazy" />
           <div className="experience-badge glass-panel">
             <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary-dark)' }}>10+</span>
             <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tahun<br/>Pengalaman</span>

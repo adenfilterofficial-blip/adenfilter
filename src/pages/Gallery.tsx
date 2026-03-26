@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const allGalleryPhotos = [
-  "https://images.unsplash.com/photo-1585704146757-bc0c2fdb8afc?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1510525695844-486a2ffdb81d?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1582234372722-50d7cec426ee?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1548842525-2b4de09087ea?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1519781541467-f70dafb0a2ea?auto=format&fit=crop&q=80&w=800"
+  "/assets/images/gallery-1.jpg",
+  "/assets/images/gallery-2.jpg",
+  "/assets/images/gallery-3.jpg",
+  "/assets/images/gallery-4.jpg",
+  "/assets/images/gallery-5.jpg",
+  "/assets/images/gallery-6.jpg",
+  "/assets/images/gallery-7.jpg",
+  "/assets/images/gallery-8.jpg"
 ];
 
 export const Gallery = () => {

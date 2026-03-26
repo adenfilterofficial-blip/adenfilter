@@ -4,19 +4,19 @@ import { Shield } from 'lucide-react';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&q=80&w=1920",
+    image: "/assets/images/hero-slide-1.jpg",
     title: "Air Kuning, Bau Besi, atau Berkapur? Selesai dalam 1x Instalasi!",
     subtitle: "Solusi Air Bersih Terpercaya • Terdaftar HAKI • Gratis Konsultasi & Cek Kualitas Air.",
     overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%)"
   },
   {
-    image: "https://images.unsplash.com/photo-1585704146757-bc0c2fdb8afc?auto=format&fit=crop&q=80&w=1920",
+    image: "/assets/images/hero-slide-2.jpg",
     title: "Teknologi Media Carbon & Resin Import",
     subtitle: "Filtrasi maksimal untuk air bening, bebas kuman, dan tidak meninggalkan noda pada peralatan rumah tangga.",
     overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%)"
   },
   {
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920",
+    image: "/assets/images/hero-slide-3.jpg",
     title: "Melayani Aceh hingga Papua, Pusat di Tangsel & Jogja",
     subtitle: "Sudah dipercaya lebih dari 1.000+ pelanggan residensial dan industri di seluruh Indonesia.",
     overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%)"

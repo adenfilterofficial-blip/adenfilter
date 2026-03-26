@@ -16,7 +16,7 @@ export const About = () => {
       </div>
 
       <div className="profile-snippet-layout" style={{ marginBottom: '5rem', alignItems: 'center' }}>
-        <img src="https://images.unsplash.com/photo-1581092921461-7031e4bf0e5f?auto=format&fit=crop&w=1000&q=80" alt="Tim Aden Filter" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+        <img src="/assets/images/about-office-tangsel.jpg" alt="Tim Aden Filter" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
         <div>
           <h2 style={{ fontSize: '2rem', color: 'var(--primary-dark)', marginBottom: '1.5rem' }}>Sejarah & Dedikasi Kami</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1rem' }}>

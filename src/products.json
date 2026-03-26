@@ -22,7 +22,7 @@
         "automatic_backwash": 5500000,
         "stainless_steel_upgrade": 1000000
       },
-      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/IMG-20211007-WA0015-300x300.jpg"]
+      "images": ["/assets/images/product-basic.jpg"]
     },
     {
       "id": "1354",
@@ -37,7 +37,7 @@
         "automatic_backwash": 7500000,
         "stainless_steel_upgrade": 2500000
       },
-      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/1354.jpg"]
+      "images": ["/assets/images/product-standard.jpg"]
     },
     {
       "id": "1665",
@@ -51,7 +51,7 @@
         "manual_backwash": 8000000,
         "automatic_backwash": 12500000
       },
-      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/IMG-20211013-WA0003-300x300.jpg"]
+      "images": ["/assets/images/product-premium.jpg"]
     },
     {
       "id": "1865",
@@ -65,13 +65,13 @@
         "manual_backwash": 16500000,
         "automatic_backwash": 22750000
       },
-      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/1865-300x300.jpeg"]
+      "images": ["/assets/images/product-premium.jpg"]
     }
   ],
   "main_images": [
-    "https://adenfilter.com/wp-content/uploads/2022/03/logo-2-79x78.png",
-    "https://adenfilter.com/wp-content/uploads/2022/03/adenfilter-2.png",
-    "https://adenfilter.com/wp-content/uploads/elementor/thumbs/head-produk-pr90xbmhbzi00tisb8c89wovlx8y3nmoud43uogtc8.jpg",
-    "https://adenfilter.com/wp-content/uploads/2022/03/pic6.jpg"
+    "/assets/images/haki-badge.png",
+    "/assets/images/hero-slide-1.jpg",
+    "/assets/images/hero-slide-2.jpg",
+    "/assets/images/hero-slide-3.jpg"
   ]
 }

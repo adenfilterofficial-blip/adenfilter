@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" className="navbar-brand">
           {data.main_images && data.main_images[0] && (
-             <img src={data.main_images[0]} alt="AdenFilter" style={{ height: '40px', objectFit: 'contain' }} />
+             <img src={data.main_images[0]} alt="AdenFilter" style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
           )}
           AdenFilter®
         </Link>
