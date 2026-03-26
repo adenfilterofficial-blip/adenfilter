@@ -6,6 +6,7 @@ import { Testimonials } from '../components/Testimonials';
 import { ArticlePreview } from '../components/ArticlePreview';
 import { GallerySlider } from '../components/GallerySlider';
 import { ProductCard } from '../components/ProductCard';
+import { Packages } from '../components/Packages';
 import { Link } from 'react-router-dom';
 
 export const Home = ({ contact, products }: { contact: any, products: any[] }) => {
@@ -14,6 +15,26 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
   return (
     <>
       <HeroCarousel ctaLink={contact.whatsapp_link} />
+      
+      <div className="container" style={{ marginTop: '-3rem', position: 'relative', zIndex: 10 }}>
+        <div className="glass-panel" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', padding: '1.5rem', textAlign: 'center', gap: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+          <div>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>1.000+</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Instalasi Sukses</div>
+          </div>
+          <div style={{ width: '1px', backgroundColor: 'rgba(0,0,0,0.1)' }} className="hide-on-mobile"></div>
+          <div>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>15+ Tahun</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Pengalaman</div>
+          </div>
+          <div style={{ width: '1px', backgroundColor: 'rgba(0,0,0,0.1)' }} className="hide-on-mobile"></div>
+          <div>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-dark)' }}>10 Tahun</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 500 }}>Garansi Tabung</div>
+          </div>
+        </div>
+      </div>
+
       <Features />
       <ProfileSnippet />
       
@@ -40,6 +61,7 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
       </section>
 
       <ProblemSolution />
+      <Packages />
       <Testimonials />
       <ArticlePreview />
       <GallerySlider />

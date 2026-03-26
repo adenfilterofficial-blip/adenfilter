@@ -22,7 +22,7 @@ export const ContactCTA: React.FC<{ whatsappLink: string }> = ({ whatsappLink })
           </svg>
           <span className="cta-badge">1</span>
         </div>
-        Konsultasi Ahli (Gratis)
+        Konsultasi Gratis - Respon &lt; 1 Jam
       </a>
     </div>
   );

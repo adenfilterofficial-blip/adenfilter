@@ -57,6 +57,23 @@ const Footer = () => (
           </ul>
         </div>
         <div className="footer-col">
+          <h4 className="footer-heading">FAQ Singkat</h4>
+          <ul className="footer-contact-list" style={{ gap: '1.2rem', display: 'flex', flexDirection: 'column' }}>
+            <li>
+              <div>
+                <strong style={{ display: 'block', color: '#fff', fontSize: '0.95rem', marginBottom: '4px' }}>Berapa lama pemasangan?</strong>
+                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Sekitar 1-2 Jam selesai.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong style={{ display: 'block', color: '#fff', fontSize: '0.95rem', marginBottom: '4px' }}>Apa ada garansi?</strong>
+                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Ya, Garansi Tabung 10 Tahun.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-col">
           <h4 className="footer-heading">Hubungi Kami</h4>
           <ul className="footer-contact-list">
             <li>

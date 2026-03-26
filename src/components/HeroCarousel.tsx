@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Shield } from 'lucide-react';
 
 const slides = [
   {
     image: "https://images.unsplash.com/photo-1542060748-10c28b62716f?auto=format&fit=crop&q=80&w=1920",
-    title: "Air Jernih & Sehat untuk Keluarga Tercinta"
+    title: "Air Kuning, Bau Besi, atau Berkapur? Selesai dalam 1x Instalasi!",
+    subtitle: "Solusi Air Bersih Terpercaya • Terdaftar HAKI • Gratis Konsultasi & Cek Kualitas Air."
   },
   {
     image: "https://images.unsplash.com/photo-1585704146757-bc0c2fdb8afc?auto=format&fit=crop&q=80&w=1920",
-    title: "Teknologi Filter Air Modern & Tahan Lama"
+    title: "Teknologi Filter Air Modern & Tahan Lama",
+    subtitle: ""
   },
   {
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920",
-    title: "Solusi Air Bersih Skala Besar untuk Bisnis Anda"
+    title: "Solusi Air Bersih Skala Besar untuk Bisnis Anda",
+    subtitle: ""
   }
 ];
 
@@ -41,13 +46,29 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
           />
           <div className="hero-overlay"></div>
           <div className="hero-content">
+            {index === 0 && (
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', padding: '0.4rem 1rem', borderRadius: '50px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.3)', marginBottom: '1rem' }}>
+                <Shield size={16} color="var(--primary-color)" />
+                <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>Brand Terdaftar Resmi HAKI</span>
+              </div>
+            )}
             <h1 className="hero-slide-title">{slide.title}</h1>
+            {slide.subtitle && (
+              <p style={{ fontSize: '1.2rem', color: '#e2e8f0', marginBottom: '2rem', maxWidth: '800px', margin: '0 auto 2rem', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                {slide.subtitle}
+              </p>
+            )}
           </div>
         </div>
       ))}
       
-      <div className="hero-static-cta">
-         <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="hero-cta">Konsultasi Gratis Via WA</a>
+      <div className="hero-static-cta" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', pointerEvents: 'auto', flexWrap: 'wrap' }}>
+         <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="hero-cta" style={{ backgroundColor: '#25D366', color: '#fff' }}>
+           Konsultasi Gratis (WA)
+         </a>
+         <Link to="/produk" className="hero-cta" style={{ backgroundColor: 'transparent', border: '2px solid #fff', color: '#fff' }}>
+           Lihat Katalog Produk
+         </Link>
       </div>
 
       <button className="carousel-control prev" onClick={prevSlide} aria-label="Previous">❮</button>

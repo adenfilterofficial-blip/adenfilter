@@ -1,7 +1,7 @@
 export const Testimonials = () => {
   const tests = [
     { quote: "Air di rumah kami semula bau besi sangat menyengat. Sehari sesudah dipasang Aden Filter sumur kami langsung jernih total dan segar untuk dipakai mandi dan cuci!", name: "Kel. Bpk. Sudirman", location: "Perumahan Bekasi" },
-    { quote: "Pelayanannya cepat ramah, dan hasil instalasinya sangat rapi. Kualitas air untuk produksi di pabrik kami sangat tertolong. Solusi terbaik komersial.", name: "PT. Maju Bersama", location: "Kawasan Industri Delta Cikarang" },
+    { quote: "Air di BSD yang tadinya kuning karat, sekarang jernih total. Pelayanan AdenFilter sangat rapi!", name: "Pak Budi", location: "Tangerang" },
     { quote: "Saya paling puas dengan garansinya. Waktu ada kendala kecil, teknisi datang begitu cepat walau sekadar untuk pengecekan rutin dan dibantu gratis.", name: "Ibu Ratna Dewi", location: "Sentul City, Bogor" }
   ];
   

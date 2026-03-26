@@ -790,8 +790,8 @@ body {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 4rem;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 @media (max-width: 900px) {
