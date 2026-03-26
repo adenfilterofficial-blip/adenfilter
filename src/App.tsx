@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav className="navbar" style={{ padding: '0.75rem 0' }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" className="navbar-brand">
-          <img src="/logo adenfilter.svg" alt="AdenFilter" style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
+          <img src="/logo adenfilter.svg" alt="AdenFilter" width={40} height={40} style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <span className="brand-aden">Aden</span><span className="brand-filter">Filter®</span>
           </div>

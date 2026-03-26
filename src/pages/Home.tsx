@@ -1,62 +1,45 @@
+import { lazy, Suspense } from 'react';
 import { HeroCarousel } from '../components/HeroCarousel';
 import { Features } from '../components/Features';
 import { ProfileSnippet } from '../components/ProfileSnippet';
-import { ProblemSolution } from '../components/ProblemSolution';
-import { Testimonials } from '../components/Testimonials';
-import { ArticlePreview } from '../components/ArticlePreview';
-import { GallerySlider } from '../components/GallerySlider';
 import { ProductCard } from '../components/ProductCard';
-import { Packages } from '../components/Packages';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Calendar, MapPin, ShieldCheck } from 'lucide-react';
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect, useRef } from 'react';
 
-const StatCounter = ({ value, label, icon: Icon, suffix = "" }: { value: number, label: string, icon: any, suffix?: string }) => {
-  const count = useMotionValue(0);
-  const formattedCount = useTransform(count, (latest) => Math.round(latest).toLocaleString());
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+// Lazy load below-fold heavy components to reduce initial JS bundle
+const ProblemSolution = lazy(() => import('../components/ProblemSolution').then(m => ({ default: m.ProblemSolution })));
+const Testimonials = lazy(() => import('../components/Testimonials').then(m => ({ default: m.Testimonials })));
+const ArticlePreview = lazy(() => import('../components/ArticlePreview').then(m => ({ default: m.ArticlePreview })));
+const GallerySlider = lazy(() => import('../components/GallerySlider').then(m => ({ default: m.GallerySlider })));
+const Packages = lazy(() => import('../components/Packages').then(m => ({ default: m.Packages })));
 
-  useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, value, { duration: 2 });
-      return controls.stop;
-    }
-  }, [isInView, value, count]);
+const LazySection = ({ children }: { children: React.ReactNode }) => (
+  <Suspense fallback={<div style={{ minHeight: '200px' }} />}>
+    {children}
+  </Suspense>
+);
 
-  return (
-    <motion.div 
-      ref={ref} 
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="stat-item" 
-      style={{ flex: '1', minWidth: '200px', padding: '1.5rem', textAlign: 'center' }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-        <motion.div 
-          whileHover={{ scale: 1.1 }}
-          style={{ padding: '0.75rem', backgroundColor: 'rgba(29, 78, 216, 0.1)', borderRadius: '12px', color: '#1d4ed8' }}
-        >
-          <Icon size={28} />
-        </motion.div>
+const StatItem = ({ value, label, icon: Icon, suffix = "" }: { value: string, label: string, icon: any, suffix?: string }) => (
+  <div className="stat-item" style={{ flex: '1', minWidth: '140px', padding: '1.5rem', textAlign: 'center' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+      <div style={{ padding: '0.75rem', backgroundColor: 'rgba(29, 78, 216, 0.1)', borderRadius: '12px', color: '#1d4ed8' }}>
+        <Icon size={28} />
       </div>
-      <div style={{ 
-        fontSize: '2.5rem', 
-        fontWeight: 800, 
-        marginBottom: '0.25rem',
-        background: 'linear-gradient(to right, #1d4ed8, #06b6d4)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        display: 'inline-block'
-      }}>
-        <motion.span>{formattedCount}</motion.span>{suffix}
-      </div>
-      <div style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 600 }}>{label}</div>
-    </motion.div>
-  );
-};
+    </div>
+    <div style={{ 
+      fontSize: '2.5rem', 
+      fontWeight: 800, 
+      marginBottom: '0.25rem',
+      background: 'linear-gradient(to right, #1d4ed8, #06b6d4)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      display: 'inline-block'
+    }}>
+      {value}{suffix}
+    </div>
+    <div style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: 600 }}>{label}</div>
+  </div>
+);
 
 export const Home = ({ contact, products }: { contact: any, products: any[] }) => {
   const topProducts = products.slice(0, 3);
@@ -76,10 +59,10 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
           border: '1px solid rgba(0,0,0,0.05)',
           overflow: 'hidden'
         }}>
-          <StatCounter value={5000} label="Instalasi Sukses" icon={CheckCircle} suffix="+" />
-          <StatCounter value={15} label="Tahun Pengalaman" icon={Calendar} suffix="+" />
-          <StatCounter value={2} label="Kantor Cabang" icon={MapPin} />
-          <StatCounter value={100} label="Garansi Kepuasan" icon={ShieldCheck} suffix="%" />
+          <StatItem value="5.000" label="Instalasi Sukses" icon={CheckCircle} suffix="+" />
+          <StatItem value="15" label="Tahun Pengalaman" icon={Calendar} suffix="+" />
+          <StatItem value="2" label="Kantor Cabang" icon={MapPin} />
+          <StatItem value="100" label="Garansi Kepuasan" icon={ShieldCheck} suffix="%" />
         </div>
       </div>
 
@@ -108,11 +91,11 @@ export const Home = ({ contact, products }: { contact: any, products: any[] }) =
         </div>
       </section>
 
-      <div className="home-section"><ProblemSolution /></div>
-      <div className="home-section"><Packages /></div>
-      <div className="home-section"><Testimonials /></div>
-      <div className="home-section"><ArticlePreview /></div>
-      <div className="home-section"><GallerySlider /></div>
+      <LazySection><div className="home-section"><ProblemSolution /></div></LazySection>
+      <LazySection><div className="home-section"><Packages /></div></LazySection>
+      <LazySection><div className="home-section"><Testimonials /></div></LazySection>
+      <LazySection><div className="home-section"><ArticlePreview /></div></LazySection>
+      <LazySection><div className="home-section"><GallerySlider /></div></LazySection>
     </>
   );
 };

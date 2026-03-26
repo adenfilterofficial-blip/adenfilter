@@ -13,7 +13,7 @@ export const Testimonials = () => {
           <div key={i} className="glass-panel testi-card">
             <div className="testi-quote">"{t.quote}"</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img src={t.image} alt={t.name} style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--primary-color)' }} />
+              <img src={t.image} alt={t.name} loading="lazy" width={50} height={50} style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--primary-color)' }} />
               <div className="testi-author">
                 <strong style={{ color: 'var(--primary-dark)' }}>{t.name}</strong><br/>
                 <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{t.location}</span>

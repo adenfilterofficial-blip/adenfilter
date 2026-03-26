@@ -32,7 +32,7 @@ export const ArticlePreview = () => {
         {articles.map(article => (
           <div key={article.id} className="article-card glass-panel">
             <div className="article-img-wrapper">
-              <img src={article.image} alt={article.title} className="article-img" loading="lazy" />
+              <img src={article.image} alt={article.title} className="article-img" loading="lazy" width={600} height={220} />
             </div>
             <div className="article-content">
               <h3 className="article-title">{article.title}</h3>

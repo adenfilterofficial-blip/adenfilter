@@ -14,7 +14,7 @@ export const GallerySlider = () => {
       <h2 className="section-title">Dokumentasi Instalasi Lapangan</h2>
       <div className="gallery-slider">
         {galleryPhotos.map((img, i) => (
-          <img key={i} src={img} alt={`Instalasi ${i+1}`} className="gallery-slide-img" loading="lazy" />
+          <img key={i} src={img} alt={`Instalasi ${i+1}`} className="gallery-slide-img" loading="lazy" width={320} height={400} />
         ))}
       </div>
       <div style={{ textAlign: 'center', marginTop: '3rem' }}>

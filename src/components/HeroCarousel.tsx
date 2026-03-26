@@ -44,6 +44,8 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
             src={slide.image} 
             alt="Hero Background" 
             className="hero-bg-img" 
+            width={1920}
+            height={1080}
             loading={index === 0 ? "eager" : "lazy"} 
             fetchPriority={index === 0 ? "high" : ("low" as any)}
           />

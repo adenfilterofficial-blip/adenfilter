@@ -23,7 +23,7 @@ export const ProductCard: React.FC<ProductProps> = ({ name, capacity, features, 
     <div className="product-card glass-panel">
       <div className="product-image-container">
         {image ? (
-          <img src={image} alt={name} className="product-image" loading="lazy" />
+          <img src={image} alt={name} className="product-image" loading="lazy" width={280} height={200} />
         ) : (
           <div className="product-image-placeholder">No Image Available</div>
         )}

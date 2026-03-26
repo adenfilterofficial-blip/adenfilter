@@ -14,7 +14,7 @@ export const ProblemSolution = () => {
       <div className="problem-grid">
         {problems.map((p, i) => (
           <div key={i} className="problem-card glass-panel" style={{ overflow: 'hidden' }}>
-            <img src={p.img} alt={p.title} className="problem-img" />
+            <img src={p.img} alt={p.title} className="problem-img" loading="lazy" width={600} height={200} />
             <div className="problem-content">
               <h3 className="problem-title">{p.title}</h3>
               <p className="problem-desc">{p.desc}</p>
