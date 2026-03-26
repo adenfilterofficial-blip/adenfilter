@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Shield } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Home } from './pages/Home';
 import { Products } from './pages/Products';
 import { Gallery } from './pages/Gallery';
@@ -117,6 +119,8 @@ export default function App() {
         </main>
         <Footer />
         <ContactCTA whatsappLink={data.contact.whatsapp_link} />
+        <Analytics />
+        <SpeedInsights />
       </div>
     </Router>
   );
