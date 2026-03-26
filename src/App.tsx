@@ -15,13 +15,13 @@ import './index.css';
 
 const Navbar = () => {
   const location = useLocation();
-  
+
   return (
     <nav className="navbar glass-panel" style={{ padding: '0.75rem 0' }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" className="navbar-brand">
           {data.main_images && data.main_images[0] && (
-             <img src={data.main_images[0]} alt="AdenFilter" style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
+            <img src={data.main_images[0]} alt="AdenFilter" style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
           )}
           AdenFilter®
         </Link>
@@ -43,7 +43,7 @@ const Footer = () => (
     <div className="container">
       <div className="footer-grid">
         <div className="footer-col">
-          <h3 className="footer-brand">CV. Rasa Filter Indonesia<br/><small style={{fontSize: '0.9rem', color: '#94a3b8'}}>(Brand: AdenFilter®)</small></h3>
+          <h3 className="footer-brand">CV. Rasa Filter Indonesia<br /><small style={{ fontSize: '0.9rem', color: '#94a3b8' }}>(Brand: AdenFilter®)</small></h3>
           <p className="footer-desc">Spesialis solusi perakitan dan instalasi penjernihan air terpercaya untuk skala residensial maupun industri dengan perlindungan garansi terbaik.</p>
         </div>
         <div className="footer-col">
@@ -68,7 +68,7 @@ const Footer = () => (
             <li>
               <div>
                 <strong style={{ display: 'block', color: '#fff', fontSize: '0.95rem', marginBottom: '4px' }}>Apa ada garansi?</strong>
-                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Ya, Garansi Tabung 10 Tahun.</span>
+                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Ya, Garansi Air Bersih 3 Bulan, dan Tabung 1 Tahun.</span>
               </div>
             </li>
           </ul>
