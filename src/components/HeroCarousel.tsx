@@ -48,7 +48,7 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
             fetchPriority={index === 0 ? "high" : ("low" as any)}
           />
           <div className="hero-overlay" style={{ background: slide.overlayBg }}></div>
-          <div className="hero-content" style={{ padding: '80px 1.5rem 0', width: '100%', top: '50%' }}>
+          <div className="hero-content" style={{ padding: '120px 1.5rem 60px', width: '100%', top: '45%' }}>
             {index === 0 && (
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', padding: '0.4rem 1rem', borderRadius: '50px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.3)', marginBottom: '1.5rem', position: 'relative', zIndex: 10 }}>
                 <Shield size={16} color="var(--primary-color, #fff)" />
