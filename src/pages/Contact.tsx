@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { Instagram } from '../components/Icons';
 
 export const Contact = ({ contact }: { contact: any }) => {
   return (
@@ -45,6 +46,16 @@ export const Contact = ({ contact }: { contact: any }) => {
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.5 }}>
                  <a href="mailto:adeniahmad@gmail.com" target="_blank" rel="noreferrer" style={{color: 'var(--primary-blue)', textDecoration: 'none'}}>adeniahmad@gmail.com</a><br/>
                  <a href="mailto:ridwanadli@gmail.com" target="_blank" rel="noreferrer" style={{color: 'var(--primary-blue)', textDecoration: 'none'}}>ridwanadli@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div className="contact-item">
+            <div className="contact-icon"><Instagram size={24} /></div>
+            <div>
+              <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Instagram</h4>
+              <p style={{ color: 'var(--text-muted)', lineHeight: 1.5 }}>
+                 <a href="https://www.instagram.com/adenfilter.official/" target="_blank" rel="noreferrer" style={{color: 'var(--primary-blue)', textDecoration: 'none'}}>@adenfilter.official</a>
               </p>
             </div>
           </div>

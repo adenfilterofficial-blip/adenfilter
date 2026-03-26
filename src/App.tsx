@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Shield, Menu, X } from 'lucide-react';
+import { Instagram } from './components/Icons';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Home } from './pages/Home';
@@ -27,9 +28,7 @@ const Navbar = () => {
     <nav className="navbar" style={{ padding: '0.75rem 0' }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link to="/" className="navbar-brand">
-          {data.main_images && data.main_images[0] && (
-            <img src={data.main_images[0]} alt="AdenFilter" style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
-          )}
+          <img src="/logo adenfilter.svg" alt="AdenFilter" style={{ height: '40px', objectFit: 'contain', marginRight: '8px' }} />
           AdenFilter®
         </Link>
         
@@ -116,6 +115,12 @@ const Footer = () => (
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <a href="mailto:adeniahmad@gmail.com">adeniahmad@gmail.com</a>
                 <a href="mailto:ridwanadli@gmail.com">ridwanadli@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <Instagram size={18} style={{ marginTop: '4px', flexShrink: 0 }} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="https://www.instagram.com/adenfilter.official/" target="_blank" rel="noopener noreferrer">@adenfilter.official</a>
               </div>
             </li>
           </ul>
