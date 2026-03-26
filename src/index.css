@@ -209,6 +209,12 @@ body {
 .carousel-control.prev { left: 2rem; }
 .carousel-control.next { right: 2rem; }
 
+@media (max-width: 768px) {
+  .carousel-control {
+    display: none;
+  }
+}
+
 .carousel-dots {
   position: absolute;
   bottom: 3rem;
