@@ -1,0 +1,77 @@
+{
+  "contact": {
+    "whatsapp_1": "081294139384",
+    "whatsapp_2": "081907840248",
+    "whatsapp_link": "https://wa.me/6281294139384"
+  },
+  "backwash": {
+    "manual": "Membutuhkan pengoperasian tuas/valve secara manual oleh pengguna untuk melakukan proses pencucian media filter.",
+    "automatic": "Menggunakan kepala kontrol elektronik (electronic control valve) yang dapat diatur waktunya untuk melakukan backwash secara otomatis tanpa campur tangan manusia."
+  },
+  "products": [
+    {
+      "id": "1054",
+      "name": "Aden Filter 1054",
+      "capacity_per_day_liters": 2000,
+      "tank_material": "Fiber (FRP)",
+      "tank_diameter_inch": 10,
+      "tank_height_inch": 54,
+      "features": ["Mengatasi air kuning", "air bau besi", "air bau got", "air bau kaporit", "air berminyak"],
+      "prices": {
+        "manual_backwash": 2750000,
+        "automatic_backwash": 5500000,
+        "stainless_steel_upgrade": 1000000
+      },
+      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/IMG-20211007-WA0015-300x300.jpg"]
+    },
+    {
+      "id": "1354",
+      "name": "Aden Filter 1354",
+      "capacity_per_day_liters": 4000,
+      "tank_material": "Fiber (FRP)",
+      "tank_diameter_inch": 13,
+      "tank_height_inch": 54,
+      "features": ["Mengatasi air kuning", "air bau besi", "air bau got", "air bau kaporit", "air berminyak"],
+      "prices": {
+        "manual_backwash": 5000000,
+        "automatic_backwash": 7500000,
+        "stainless_steel_upgrade": 2500000
+      },
+      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/1354.jpg"]
+    },
+    {
+      "id": "1665",
+      "name": "Aden Filter 1665",
+      "capacity_per_day_liters": 8000,
+      "tank_material": "Fiber (FRP)",
+      "tank_diameter_inch": 16,
+      "tank_height_inch": 65,
+      "features": ["Mengatasi air kuning", "air bau besi", "air bau got", "air bau kaporit", "air berminyak"],
+      "prices": {
+        "manual_backwash": 8000000,
+        "automatic_backwash": 12500000
+      },
+      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/IMG-20211013-WA0003-300x300.jpg"]
+    },
+    {
+      "id": "1865",
+      "name": "Aden Filter 1865",
+      "capacity_per_day_liters": 12000,
+      "tank_material": "Fiber (FRP)",
+      "tank_diameter_inch": 18,
+      "tank_height_inch": 65,
+      "features": ["Mengatasi air kuning", "air bau besi", "air bau got", "air bau kaporit", "air berminyak"],
+      "prices": {
+        "manual_backwash": 16500000,
+        "automatic_backwash": 22750000
+      },
+      "images": ["https://adenfilter.com/wp-content/uploads/2022/07/1865-300x300.jpeg"]
+    }
+  ],
+  "main_images": [
+    "https://adenfilter.com/wp-content/uploads/2022/03/logo-2-79x78.png",
+    "https://adenfilter.com/wp-content/uploads/2022/03/adenfilter-2.png",
+    "https://adenfilter.com/wp-content/uploads/elementor/thumbs/head-produk-pr90xbmhbzi00tisb8c89wovlx8y3nmoud43uogtc8.jpg",
+    "https://adenfilter.com/wp-content/uploads/2022/03/pic6.jpg"
+  ]
+}
