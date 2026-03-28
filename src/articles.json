@@ -65,5 +65,23 @@
     ],
     "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
     "date": "18 Nov 2026"
+  },
+  {
+    "id": 4,
+    "slug": "air-jernih-belum-tentu-bersih",
+    "category": "Edukasi Air",
+    "title": "Perhatian! Tidak Semua Air yang Jernih Pasti Bersih. Kenali Ciri-Cirinya",
+    "date": "28 Mar 2026",
+    "image": "/assets/images/blog/air-jernih-menipu.webp",
+    "snippet": "Pernahkah Anda melihat air kran yang bening dan merasa tenang untuk meminumnya? Tunggu dulu, kejernihan bisa menipu. Mari bedah kriteria air yang benar-benar layak konsumsi.",
+    "content": [
+      "Pernahkah Anda menuangkan segelas air dari kran, melihatnya berkilau jernih, lalu merasa tenang untuk langsung meminum atau menggunakannya untuk memasak? Tunggu sebentar. Ada sebuah mitos berbahaya yang dipercaya banyak orang: 'Kalau airnya bening, berarti aman.'",
+      "Faktanya, kejernihan hanyalah kulit luar. Bakteri mikroskopis, kandungan logam berat, hingga zat kimia berbahaya sering kali tidak terlihat oleh mata telanjang. Mari kita bedah lebih dalam mengapa kejernihan bisa menipu dan bagaimana sebenarnya kriteria air yang benar-benar layak konsumsi bagi keluarga Anda.",
+      "**Mengapa 'Jernih' Saja Tidak Cukup?** Air yang tampak bening bisa saja mengandung polutan tersembunyi. Misalnya, air yang mengandung zat besi tinggi mungkin terlihat jernih saat baru keluar dari kran, namun akan berubah kuning setelah didiamkan beberapa saat (teroksidasi). Atau yang lebih berbahaya, kontaminasi bakteri E. coli atau mikroplastik yang sama sekali tidak mengubah warna air namun berdampak buruk bagi kesehatan jangka panjang.",
+      "**Ciri-Ciri Air Bersih Menurut Standar Kesehatan:** Untuk memastikan air di rumah Anda benar-benar aman, gunakan indikator 3-T (Tidak Berwarna, Tidak Berbau, Tidak Berasa). Air sehat tidak boleh mengeluarkan aroma amis atau kaporit menyengat. Selain itu, air murni seharusnya tawar; rasa logam atau asam menandakan ketidakseimbangan pH yang bisa merusak kesehatan.",
+      "**Pentingnya pH Netral dan TDS Rendah:** Secara medis, air layak konsumsi memiliki pH antara 6,5 hingga 8,5. Air yang terlalu asam dapat merusak pipa dan lambung. Selain itu, waspadai endapan kerak putih setelah merebus air, yang menandakan kadar kapur (TDS) yang tinggi.",
+      "**Solusi Cerdas: Filter Air Modern.** Memasak air memang membunuh bakteri, tetapi tidak menghilangkan logam berat atau zat kimia. Inilah mengapa sistem filtrasi air menjadi kebutuhan pokok rumah modern. Menggunakan filter berkualitas membantu menyaring kontaminan mikroskopis, memberikan rasa air lebih segar, serta mencegah penyakit ginjal dan kulit.",
+      "**Kesimpulan:** Jangan biarkan mata menipu Anda. Air jernih adalah standar estetika, tetapi air bersih adalah standar keselamatan. Pastikan sumber air di rumah Anda telah melalui sistem penyaringan yang tepat agar keluarga tetap sehat."
+    ]
   }
 ]
