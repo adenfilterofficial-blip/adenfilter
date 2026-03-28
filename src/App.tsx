@@ -12,6 +12,7 @@ import './index.css';
 const Products = lazy(() => import('./pages/Products').then(m => ({ default: m.Products })));
 const Gallery = lazy(() => import('./pages/Gallery').then(m => ({ default: m.Gallery })));
 const Articles = lazy(() => import('./pages/Articles').then(m => ({ default: m.Articles })));
+const ArticleDetail = lazy(() => import('./pages/ArticleDetail').then(m => ({ default: m.ArticleDetail })));
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
 const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
 
@@ -162,6 +163,7 @@ export default function App() {
               <Route path="/produk" element={<Products products={data.products} backwash={data.backwash} />} />
               <Route path="/galeri" element={<Gallery />} />
               <Route path="/artikel" element={<Articles />} />
+              <Route path="/artikel/:slug" element={<ArticleDetail />} />
               <Route path="/tentang-kami" element={<About />} />
               <Route path="/kontak" element={<Contact contact={data.contact} />} />
             </Routes>
