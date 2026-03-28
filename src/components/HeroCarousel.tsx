@@ -18,7 +18,7 @@ const slides = [
   {
     image: "/assets/images/hero-slide-3.jpg",
     title: "Melayani Aceh hingga Papua, Pusat di Tangsel & Jogja",
-    subtitle: "Sudah dipercaya lebih dari 1.000+ pelanggan residensial dan industri di seluruh Indonesia.",
+    subtitle: "Sudah dipercaya lebih dari 5.000+ pelanggan residensial dan industri di seluruh Indonesia.",
     overlayBg: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.85) 100%)"
   }
 ];
@@ -40,13 +40,13 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
     <section className="hero-carousel">
       {slides.map((slide, index) => (
         <div key={index} className={`hero-slide ${index === current ? 'active' : ''}`}>
-          <img 
-            src={slide.image} 
-            alt="Hero Background" 
-            className="hero-bg-img" 
+          <img
+            src={slide.image}
+            alt="Hero Background"
+            className="hero-bg-img"
             width={1920}
             height={1080}
-            loading={index === 0 ? "eager" : "lazy"} 
+            loading={index === 0 ? "eager" : "lazy"}
             fetchPriority={index === 0 ? "high" : ("low" as any)}
           />
           <div className="hero-overlay" style={{ background: slide.overlayBg }}></div>
@@ -63,19 +63,19 @@ export const HeroCarousel: React.FC<{ ctaLink: string }> = ({ ctaLink }) => {
                 {slide.subtitle}
               </p>
             )}
-            
+
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', pointerEvents: 'auto', flexWrap: 'wrap' }}>
-               <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="hero-cta" style={{ backgroundColor: '#25D366', color: '#fff' }}>
-                 Konsultasi Gratis (WA)
-               </a>
-               <Link to="/produk" className="hero-cta" style={{ backgroundColor: 'rgba(0,0,0,0.3)', border: '2px solid #fff', color: '#fff', backdropFilter: 'blur(4px)' }}>
-                 Lihat Katalog Produk
-               </Link>
+              <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="hero-cta" style={{ backgroundColor: '#25D366', color: '#fff' }}>
+                Konsultasi Gratis (WA)
+              </a>
+              <Link to="/produk" className="hero-cta" style={{ backgroundColor: 'rgba(0,0,0,0.3)', border: '2px solid #fff', color: '#fff', backdropFilter: 'blur(4px)' }}>
+                Lihat Katalog Produk
+              </Link>
             </div>
           </div>
         </div>
       ))}
-      
+
       <button className="carousel-control prev" onClick={prevSlide} aria-label="Previous">❮</button>
       <button className="carousel-control next" onClick={nextSlide} aria-label="Next">❯</button>
 
